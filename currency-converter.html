@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC</title>
+    <style>
+        body{
+            background-color: rgb(239, 232, 238);
+        }
+        h1{
+            text-align: center;
+            font-family: 'Poppins Medium';
+            font-size: 45px;
+            color: #40083e;
+            margin-top: 7%;
+        }
+        h3{
+            font-family: 'Poppins Light';
+            color: #652b63;
+            margin-left: 38%;
+            position: absolute;
+        }
+        input{
+            margin-left: 50%;
+            border: 1px solid rgb(206, 182, 216);
+            width: 14%;
+            height: 28px;
+            font-family: 'Poppins Light';
+        }
+    </style>
+</head>
+<body>
+    <h1>Currency Converter</h1>
+    <h3 style="margin-top: 2%;">Marocain Dirham :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="MAD" oninput="mad()" onchange="mad()" id="Mad">
+    <h3 style="margin-top: 2%;">Américain Dollar :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="USD" oninput="usd()" onchange="usd()" id="Usd">
+    <h3 style="margin-top: 2%;">Euro :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="EURO" oninput="euro()" onchange="euro()" id="Euro">
+    <h3 style="margin-top: 2%;">Saoudien Riyal :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="SAR" oninput="riyal()" onchange="riyal()" id="Riyal">
+    <h3 style="margin-top: 2%;">Russe Rouble :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="RUB" oninput="roub()" onchange="roub()" id="Rouble">
+    <h3 style="margin-top: 2%;">Chinois Yuan :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="CHY" oninput="yuan()" onchange="yuan()" id="Yuan">
+    <h3 style="margin-top: 2%;">Turque Livre :</h3>
+    <input style="margin-top: 2%;" type="number" placeholder="TUL" oninput="livr()" onchange="livr()" id="Livr">
+    <script>
+        var dir = document.getElementById("Mad");
+        var dol = document.getElementById("Usd");
+        var eur = document.getElementById("Euro");
+        var riy = document.getElementById("Riyal");
+        var rub = document.getElementById("Rouble");
+        var yua = document.getElementById("Yuan");
+        var liv = document.getElementById("Livr");
+
+        function mad() {
+            dol.value = dir.value * 0.097;
+            eur.value = dir.value * 0.090;
+            riy.value = dir.value * 0.37;
+            rub.value = dir.value * 7.41;
+            yua.value = dir.value * 0.69;
+            liv.value = dir.value * 0.66;
+        }
+        function usd() {
+            dir.value = dol.value * 10.30;
+            eur.value = dol.value * 0.93;
+            riy.value = dol.value * 3.76;
+            rub.value = dol.value * 76.28;
+            yua.value = dol.value * 7.11;
+            liv.value = dol.value * 6.77;
+        }
+        function euro() {
+            dir.value = eur.value * 11.11;
+            dol.value = eur.value * 1.08;
+            riy.value = eur.value * 4.06;
+            rub.value = eur.value * 82.30;
+            yua.value = eur.value * 7.67;
+            liv.value = eur.value * 7.31;
+        }
+        function riyal() {
+            dir.value = riy.value * 2.74;
+            eur.value = riy.value * 0.25;
+            dol.value = riy.value * 0.27;
+            rub.value = riy.value * 20.29;
+            yua.value = riy.value * 1.89;
+            liv.value = riy.value * 1.80;
+        }
+        function roub() {
+            dir.value = rub.value * 0.14;
+            eur.value = rub.value * 0.012;
+            riy.value = rub.value * 0.049;
+            dol.value = rub.value * 0.013;
+            yua.value = rub.value * 0.093;
+            liv.value = rub.value * 0.089;
+        }
+        function yuan() {
+            dir.value = yua.value * 1.45;
+            eur.value = yua.value * 0.13;
+            riy.value = yua.value * 0.53;
+            rub.value = yua.value * 10.74;
+            dol.value = yua.value * 0.14;
+            liv.value = yua.value * 0.95;
+        }
+        function livr() {
+            dir.value = liv.value * 1.52;
+            eur.value = liv.value * 0.14;
+            riy.value = liv.value * 0.55;
+            rub.value = liv.value * 11.26;
+            yua.value = liv.value * 1.05;
+            dol.value = liv.value * 0.15;
+        }
+
+    </script>
+</body>
+</html>
